@@ -1,0 +1,6 @@
+reported:bool
+reason:string
+date:
+propid{associate with prop containg title,id}
+propertauthor:email and username
+reportedby:report.property.author.user/email
