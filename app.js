@@ -10,7 +10,7 @@ var count12=0;
 var currentPage=parseInt(0);
 
 
-mongoose.connect("mongodb://localhost/realestate",{useNewUrlParser: true});
+mongoose.connect("mongodb://ashish:ashish123@ds249623.mlab.com:49623/realestate");
 app.set("view engine","ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
