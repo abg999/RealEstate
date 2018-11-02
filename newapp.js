@@ -19,7 +19,7 @@ var currentPage=parseInt(0),
 	type="";
 
 
-mongoose.connect("mongodb://localhost/realestate",{useNewUrlParser: true});
+mongoose.connect("mongodb://ashish:ashish123@ds249623.mlab.com:49623/realestate");
 app.set("view engine","ejs");
 
 app.use(methodOverride("_method"));//Tells node to look for pattern _method in url for eg "_method=PUT" 
