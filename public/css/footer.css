@@ -1,0 +1,56 @@
+.top-footer{
+	margin-top: 6rem;
+	background: #121B22;
+	color: #fff;
+	padding: 6rem 0;
+}
+.logo{
+	margin-bottom: 2rem;
+}
+.btn-secondary{
+background: #0098ef;
+color: #fff;
+border: 0;
+}
+.btn-secondary:hover {
+background: #121B22;
+color: #fff;
+}
+.contactus::after{
+	display: block;
+    height: 3px;
+    font-weight: bold;
+    background-color: #0098ef;
+    content: " ";
+    width: 50px;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+
+}
+.ulclass{
+	list-style: none;
+	margin-left: -39px;
+}
+.contactus-item{
+	margin-left: 1.5rem;
+	font-weight: 400;
+	display: inline-block;
+
+}
+ .ulclass .liclass{
+	margin-bottom: 1rem;
+
+border-bottom: 1px dotted #666;
+}
+@media only screen and (max-width: 700px){
+
+.second-col{
+	margin-top: 3rem;
+}
+}
+
+.second-footer{
+padding: 1.5rem 0;
+background: #0098ef;
+color: #fff;
+}

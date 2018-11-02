@@ -1,0 +1,42 @@
+body{
+	background:#333;
+	color:#ffff;
+}
+
+.navbar{
+	border-bottom:#008ed6 3px solid;
+	opacity: 0.8;
+}
+
+#register-section{
+	background: url("/img/D2T2K4.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; 
+	min-height: 1000px;
+}
+
+#register-section .dark-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height:1000px;
+	background: rgba(0,0,0,0.7);
+}
+
+#register-section .register-inner{
+	padding-top: 150px;
+}
+
+#register-section .card-form{
+	opacity: 0.8;
+}
+
+#register-section .fas{
+	color: #008ed6;
+	background: #ffff;
+	padding: 5px;
+	border-radius: 5px;
+	
+}

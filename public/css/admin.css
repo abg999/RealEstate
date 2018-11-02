@@ -1,0 +1,24 @@
+
+body{
+	 background-color:   #edeff1;
+}
+.posts{
+	background-color: blue; 
+	padding: 3rem;
+	text-align: center;
+	margin: auto;
+	color: white;
+}
+.users{
+	background-color: yellow; 
+	padding: 3rem;
+	text-align: center;
+	margin: auto;
+	margin-top: 2rem;
+	color: white;
+}
+.right{
+	border-left: 34px solid #edeff1; 
+}
+
+

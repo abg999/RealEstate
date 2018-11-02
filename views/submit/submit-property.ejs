@@ -1,0 +1,325 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" href="/css/submit-property.css">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet"> 
+<script type="text/javascript" src="/js/dropdown-select.js"></script>
+<div class="container main-body">
+	<div class="row content">
+		<div class="col-sm-12">
+			<div class="single-add-property">
+		 		<h3>Property description and price</h3>
+				<div class="left-spacing">
+					<form action="/submit" method="POST">
+						<div class="row content">
+							<div class="col-lg-12">
+								<p>
+									<label for="title">Property Title</label>
+									<input id="title" name="propDetails[propTitle]" placeholder="Enter your property title" type="text">
+								</p>
+									
+								<p>
+									<label for="description">Property Description</label>
+									<textarea   id="description" name="propDetails[desc]" placeholder="Describe about you property..."  ></textarea>
+								</p>
+								<p>
+									<div class="row content">
+										<div class="col-sm-4">
+											<label for="status">Status</label>
+											<select required id="status" name="propDetails[propStatus]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+												<option selected></option>
+	    										<option value="1">Rent</option>
+	    										<option value="2">Sale</option>
+	    									</select>
+										</div>
+										<div class="col-sm-4">
+											<label for="propType">Type</label>
+											<select required id="propType" name="propDetails[propType]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+												<option selected></option>
+	    										<option value="1">House</option>
+	    										<option value="2">Commercial</option>
+	    										<option value="2">Resedential</option>
+	    									</select>
+										</div>
+										<div class="col-sm-4">
+											<label for="rooms">Rooms</label>
+											<select required id="rooms" name="propDetails[propRooms]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+												<option selected></option>
+	    										<option value="1">1</option>
+	    										<option value="2">2</option>
+	    										<option value="3">3</option>
+	    										<option value="4">4</option>
+	    										<option value="5">>5</option>
+	    										
+	    										
+	    									</select>
+										</div>
+										<div class="col-sm-4">
+											<label for="bathrooms">Bathrooms</label>
+											<select required id="bathrooms" name="propDetails[bathrooms]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+												<option selected></option>
+	    										<option value="1">1</option>
+	    										<option value="2">2</option>
+	    										<option value="3">3</option>
+	    										<option value="4">4</option>
+	    										<option value="5">>5</option>
+	    										
+	    										
+	    									</select>
+										</div>
+										<div class="col-sm-4">
+											<label for="garages">Garages</label>
+											<select required id="garages" name="propDetails[garages]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+												<option selected></option>
+	    										<option value="1">1</option>
+	    										<option value="2">2</option>
+	    										<option value="3">3</option>
+	    										<option value="4">4</option>
+	    										<option value="5">>5</option>
+	    									</select>
+										</div>								
+										</div>
+								</p>
+								<p>
+									<div class="row content">
+										<div class="col-sm-6">
+											<label for="price">Price</label>
+											<input type="number" name="propDetails[propPrice]" id="price" placeholder="INR" id="price">
+										</div>
+										<div class="col-sm-6">
+											<label for="price">Area</label>
+											<input type="number" name="propDetails[propArea]" id="price" placeholder="Sqft." id="price">
+										</div>
+									</div>
+								</p>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container" style="border-top: 14px solid #edeff1"><!--For Property upload -->
+			<div class="row content">
+				<div class="col-sm-12">
+					<div class="single-add-property">
+						<h3>Property Media</h3>
+							<div class="left-spacing">
+								<div class="row content">
+									<div class="col-sm-6">
+										<label for="img1">Image1</label>
+										<input  id="img1" type="text" name="propDetails[img1]" >
+
+									</div>
+									<div class="col-sm-6">
+										<label for="img2">Image2</label>
+										<input id="img2" type="text" name="propDetails[img2]">
+
+									</div>
+									<div class="col-sm-6">
+										<label for="img3">Image3</label>
+										<input id="img3" type="text" name="propDetails[img3]">
+
+									</div>
+								</div>
+
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="border-top: 14px solid #edeff1"><!--For Property upload -->
+			<div class="row content">
+				<div class="col-sm-12">
+					<div class="single-add-property">
+						<h3>Property Location</h3>
+							<div class="left-spacing">
+								<div class="row">
+									<div class="col-lg-6">
+										<label for="address">Address</label>
+											<input id="address" name="propDetails[address]" placeholder="Enter your property Address" type="text">
+									</div>
+									
+									<div class="col-lg-6">		
+										<label for="state">State</label>
+										<select id="state" name="propDetails[state]" class="custom-select mb-2 mr-sm-2 mb-sm-0" 
+											onchange="populate(this.id,'city')">
+											<option value="1">Maharashtra</option>
+			    						<option value="2">Gujrat</option>
+			    					</select>
+									</div>
+								</div>
+								<div class="row content" style="margin-top: 43px;">
+									<div class="col-lg-6">
+											<label for="city">City</label>
+											<select id="city" name="propDetails[city]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+											</select>
+									</div>
+									
+									<div class="col-lg-6">		
+										
+											<label for="country">Property Description</label>
+											<input type="text"  id="country" name="country" placeholder="Country"  >
+										
+									</div>
+								</div>
+								<p>
+									<div class="row" style="margin-top: 43px;">
+	
+											
+											<div class="col-lg-6">
+											
+												<label for="latitude">Google Maps Latitude</label>
+												<input id="latitude" name="propDetails[latitude]" placeholder="Enter Maps Latitude" type="text">
+											
+										</div>
+										<div class="col-lg-6">		
+											
+												<label for="longitude">Google Maps Longitude</label>
+												<input type="text"  id="longitude" name="propDetails[longitude]" placeholder="Enter Maps Longitude">
+											
+										</div>
+									</div>
+								</p>
+							</div>
+								
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="border-top: 14px solid #edeff1"><!--For Property upload -->
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="single-add-property">
+						<h3>Property Features</h3>
+							<div class="left-spacing">
+								<div class="row">
+									<div class="col-md-12">
+										<ul type="none">
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[airCon]" value="true">
+												Air conditioning
+											</label>
+											</li>
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[swimming]" value="true">
+												Swimming Pool
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[heating]" value="true">
+												Centeral Heating
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[laundtyRoom]" value="true">
+												Laundry Room
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[gym]" value="true">
+												Gym
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[windowCovering]" value="true">
+												Window Covering
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[refigrator]" value="true">
+												Refrigerator
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[tvwif]" value="true">
+												Tv cable & Wifi
+											</label>
+											</li>
+											
+											<li>
+												<label>
+												<input type="checkbox" name="propDetails[microwav]" value="true">
+												Microwave
+											</label>
+											</li>
+										
+										</ul>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<!--<div class="container" style="border-top: 14px solid #edeff1">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="single-add-property">
+						<h3>Contact Information</h3>
+							<div class="left-spacing">
+								<div class="row">
+
+										<div class="col-lg-6">
+										
+											<label for="name">Name</label>
+											<input id="address" name="propDetails[conName]" placeholder="Enter your Name" type="text">
+										
+									</div>
+									<div class="col-lg-6">		
+										
+											<label for="username">username</label>
+											<input type="text"  id="username" name="username" placeholder="Enter Your Username" >
+										
+									</div>
+								</div>
+								<p>
+									<div class="row" style="margin-top: 43px;">
+	
+											
+											<div class="col-lg-6">
+											
+												<label for="email">Email</label>
+												<input id="email" name="propDetails[email]" placeholder="Enter your Email adress" type="email">
+											
+										</div>
+										<div class="col-lg-6">		
+											
+												<label for="phone">Phone</label>
+												<input type="text"  id="phone" name="propDetails[phone]" placeholder="Enter your Phone Number">
+											
+										</div>
+									</div>
+								</p>
+							</div>
+								
+					</div>
+				</div>
+			</div>
+		</div>-->
+		<div class="container" style="border-top: 14px solid #edeff1;background-color: #edeff1;">
+			<button>Submit Property</button>
+		</form>
+		</div>
+			
+	</div>
+</div>
+
+
+</div>
+<% include ../partials/footer%>

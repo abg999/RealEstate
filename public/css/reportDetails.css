@@ -1,0 +1,21 @@
+/*.container{
+ margin-top: 7.0em;		
+}*/
+.header{
+	display: inline-block;
+}
+.view{
+	float:right;
+	background-color: #0098ef;
+	padding:18px;
+	font-weight: 800;
+	border:none;
+	color: #fff;
+	border-radius: 7px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.view:hover {
+	background: black ;
+
+}

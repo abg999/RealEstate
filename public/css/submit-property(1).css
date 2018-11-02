@@ -1,0 +1,101 @@
+
+
+
+.main-body{
+  padding-top: 100px;
+  margin-top: 50px;
+}
+
+.Element{
+	margin: 7px;
+}
+.description{
+	border: 1px solid grey;
+	padding: 7px;
+}
+
+
+.body{
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea{
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+border-bottom: 1px solid #ddd;
+margin-bottom: 40px;
+padding-bottom: 25px;
+color: #0098ef;
+text-transform: capitalize;
+}
+
+
+.demo{
+  width: calc(100% - 45px);
+}
+
+input[type=text],input[type=number],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.single-add-property > h3{
+
+border-bottom: 1px solid #ddd;
+margin-bottom: 40px;
+padding-bottom: 25px;
+color: #0098ef;
+text-transform: capitalize;
+font-weight: 600;
+font-size: 22.5px;
+
+}
+
+label{
+  font-weight: 600;
+  font-size:15px;
+}
+p{
+  margin-bottom: 35px;
+}
+textarea{
+  height: 187px;
+}
+.left-spacing{
+  margin-left: 40px;
+}
+body{
+background-color:   #edeff1;
+}
+li{
+  display: inline-block;
+  margin: 5px 10px;
+
+}
+button{
+  border: medium none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.4s ease 0s;
+  background-color: #0098ef;
+text-transform: capitalize;
+margin-bottom: 22px;
+
+
+}
+button:hover {
+
+    background: #121B22 none repeat scroll 0 0;
+
+}
+

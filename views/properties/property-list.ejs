@@ -1,0 +1,150 @@
+<% include ../partials/header %>
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="/css/property-list(1).css">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
+  <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+<div class="container main-body">
+
+<div style="margin: auto;" class="search-trip">
+	<h2><i class="fas fa-filter"></i> Filter by</h2>
+		<form action="/list" method="GET" >
+			<div class="row" >
+				<div class="col-lg-3 col-md-6">
+					<label for="rooms">Rooms</label>
+					<select  id="rooms" name="propFilter[propRooms]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+						<option selected></option>
+	    				<option value="1">1</option>
+	    				<option value="2">2</option>
+	    				<option value="3">3</option>
+	    				<option value="4">4</option>
+	    				<option value="5">>5</option>
+	    		</select>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<label for="bathrooms">Bathrooms</label>
+						<select  id="bathrooms" name="propFilter[bathrooms]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+							<option selected></option>
+	    					<option value="1">1</option>
+	    					<option value="2">2</option>
+	    					<option value="3">3</option>
+	    					<option value="4">4</option>
+	    					<option value="5">>5</option>
+	    			</select>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<label for="garages">Garages</label>
+					<select id="garages" name="propFilter[garages]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+						<option selected></option>
+	    			<option value="1">1</option>
+	    			<option value="2">2</option>
+	    			<option value="3">3</option>
+	    			<option value="4">4</option>
+	    			<option value="5">>5</option>
+	    		</select>
+				</div>
+				<div class="col-lg-3 col-md-6" >
+				
+						<input type="submit" name="submit"  class="btn btn-primary btn-lg" role="button" value="Search Property" style="padding: 9px;margin-top: 8px;">
+				</div>
+		</form>
+</div>
+</div>
+
+
+
+<div class="list-space">
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			
+			<h4><i class="fas fa-th-list"></i>  Property-Listing</h4>
+		</div>
+	</div>
+</div>
+	<div class="row">
+		<% prop.forEach(function(prop){ %>
+		<div class="col-lg-4 col-md-12 col-xs-12" style="padding-left: 0;padding-right: 0;padding-top: 20px;">
+			<img src="<%= prop.img1 %>"  alt="Not found">
+		</div>
+		<div class="col-lg-8 col-md-12 homes-content" >
+			<a href="/list/properties/<%= prop._id %>"><h3><%= prop.propTitle%></h3></a>
+			<p>
+				<a href="#">
+					<span class="header-icon">
+							<i class="fa fa-map-marker-alt"></i>	
+					</span>
+					
+					<span><%= prop.address.substring(0,20)%>......</span>
+				</a>
+			</p>
+										<ul type="none">
+										<div class="row">
+										<div class="col-lg-6 col-md-6 col-sm-6" >
+											<li>
+												<i class="fa fa-bed"></i>
+												<span> <%= prop.propRooms %> Bedrooms</span>
+											</li>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6">
+											<li>
+												<i class="fa fa-bath"></i>
+												<span><%= prop.bathrooms %> Bathrooms</span>
+											</li>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6">
+											<li>
+												<i class="fa fa-warehouse"></i>
+												<span><%= prop.garages %> Garages</span>
+											</li>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 ">
+											<li>
+												<i class="fa fa-object-group"></i>
+												<span> <%= prop.propArea %> sq ft</span>
+											</li>
+									</div>
+								</div>
+										</ul>
+								<!-- Price -->
+								<div class="price-properties">
+										<h3 class="title mt-3">
+											<a href="#">$<%= prop.propPrice %></a>
+										</h3>
+								</div>
+								<div class="footer">
+								<i class="fa fa-user"></i>
+								<span> <%= prop.author.username %></span>
+								</div>	
+					
+		</div>
+		<% }) %>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5"></div>
+		<div class="col-md-3">
+			<ul class="pagination">
+				<% if(cp>1){ %>
+				<li><a href="/list/<%= --cp %>"><</a></li>
+				<%cp++} %>
+				<% for(var i=0;i<=2;i++){ %>
+					<% if(cp>4){ %>
+						<% break;%>
+					<% }else{%>
+  					<li><a href="/list/<%= cp %>"><%= cp %></a></li>
+  				<% } %>
+  			<% cp++; %>
+  			<% } %>
+  			<li><a href="/list/<%= cp++ %>">></a></li>
+			</ul>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+
+
+
+<h1><%= co%></h1>
+<!-- <h1><%= cp%></h1> -->
+</div>
+
+<% include ../partials/footer %>

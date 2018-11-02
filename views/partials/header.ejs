@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Properties</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/navbar.css"> -->
+  <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/header.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/properties.css"> -->
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container">
+       <a href="/" class="navbar-brand fas fa-home"> Find Houses</a> <!-- <a href="/" class="navbar-brand">RealEstate</a> -->
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <% if(currentUser) { %>
+            <li class="nav-item">
+              <% if(currentUser.username==="admin"){ %>
+              <li class="nav-item">
+              <a href="/admin" class="nav-link">Signed in as <%= currentUser.username %></a>  
+              </li>
+              <% } else { %>
+            <a href="#" class="nav-link">Signed in as <%= currentUser.username %></a>
+          </li>
+          <% } %>
+           <% } %>
+          <li class="nav-item">
+            <a href="/list" class="nav-link">List All Properties</a>
+          </li>
+          <li class="nav-item">
+            <a href="/submit" class="nav-link">Submit Property</a>
+          </li>
+          <% if(!currentUser) { %>
+          <li class="nav-item">
+            <a  href="/login" class="nav-link">Log-In <i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li class="nav-item">                             
+            <a href="/register" class="nav-link">Sign Up <i class="fas fa-user-plus"></i></a>
+          </li>
+          <% } else { %>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">Logout <i class="fas fa-sign-out-alt"></i></a>
+          </li>
+          <% } %>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="message">
+    <% if(error && error.length > 0) { %>
+      <div class="alert alert-danger"  role="alert">
+        <%= error %>
+      </div>
+      <% } %>
+      <% if(success && success.length > 0) { %>
+      <div class="alert alert-success" role="alert">
+        <%= success %>
+      </div>
+      <% } %>
+</div>

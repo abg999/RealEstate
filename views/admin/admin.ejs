@@ -1,0 +1,63 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" href="/css/admin.css">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
+<div class="container">
+	<div class="row left"  style="margin-top: 75px;">
+		<div class="col-lg-9 cold-md-12">
+			<h1>Flagged properties</h1>
+			<table class="table table-striped">
+ 				 <thead class="thead-dark">
+ 				 	<tr>
+      			<th scope="col">#</th>
+      			<th scope="col">Title</th>
+      			<th scope="col">No of Reports</th>
+      			<th scope="col">First Report Date</th>
+      			<th></th>
+      			<th></th>
+    			</tr>
+  			</thead>
+  			<tbody>
+	  			<% prop.forEach(function(prop){ %>
+							<%  if(prop.reports.length>0){ %>
+	   						<tr>
+	      						<th scope="row">1</th>
+	      								<td><%= prop.propTitle %></td>
+	      								<td><%= prop.reports.length  %></td>
+	      								<td><%= prop.reports[0].reportedOn.toDateString() %></td>
+	      								<td><a href="/admin/<%= prop.id %>/reportDetails">Details</a></td>
+	      								<td><a href="/admin/<%=  prop.id %>/deleteprop%>"><i class="fas fa-trash-alt" style="color: red"></i></a></td>
+	      								<i class="trash alternate icon"></i>
+	    					</tr>
+	    				<% } %>
+	    		<% }); %>
+  			</tbody>
+			</table>
+		</div>
+		<div class="col-lg-3 right">
+			<div class="row">
+				<div class="col-lg-12 posts" >
+						<h1> Posts
+						<%=  prop.length %>
+
+					</h1>
+					<h1><i class="fas fa-pencil-alt"></i></h1>
+
+
+					
+				</div>
+
+				<div class="col-lg-12  users">
+					<h1>Users
+						<%=  user_count %>
+
+					</h1>
+					<h1><i class="fas fa-users"></i></h1>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<% include ../partials/footer %>

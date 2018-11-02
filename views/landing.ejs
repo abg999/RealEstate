@@ -1,0 +1,476 @@
+<% include partials/header %>
+
+<link rel="stylesheet" type="text/css" href="/css/landing.css">
+
+<div class="all-body">
+	<div class="container">
+		<div class="jumbotron jumbo-style" style="margin-top: 6em;">
+			<h1>Real estate</h1>
+		</div>
+			<div class="row filter-section">
+				<div class="col-lg-12 col-md-6  col-xs-12">
+					<form action="/list" method="GET">
+						<div class="row filter-content">
+							<div class="col-lg-12 col-md-12 col-xs-12">
+								<h2>Find your dream house here</h2>
+							</div>
+							<div class="col-lg-3  col-md-6  col-xs-12">
+								<label for="state">State</label>
+								<select required id="state" name="propDetails[state]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+									<option selected></option>
+									<option value="1">Maharashtra</option>
+									<option value="2">Gujrat</option>
+								</select>
+							</div>
+							<div class="col-lg-3 col-md-6  col-xs-12">
+								<label for="city">City</label>
+								<select required id="city" name="propDetails[city]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+									<option selected></option>
+									<option value="1">Mumbai</option>
+									<option value="2">Ahemedabad</option>
+								</select>
+							</div>
+							<div class="col-lg-3 col-md-6  col-xs-12">
+								<label for="status">Status</label>
+								<select required id="status" name="propDetails[propStatus]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+									<option selected></option>
+									<option value="1">Rent</option>
+									<option value="2">Sale</option>
+								</select>
+								
+							</div>
+							<div class="col-lg-3 submit-style">
+								<input type="submit" name="submit" class="">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+	</div>
+
+	<div class="container-fluid padding-section">
+		<div class="section-title">
+			<div class="row"  style="margin-top: 13em;">
+				<div class="col-lg-6">
+					<h3>Recently Added</h3>
+					<h2>Properties for Sale</h2>
+				</div>
+				<div class="col-lg-6">
+					<button>View All</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-3 col-md-6  col-xs-12 ">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 col-md-6  col-xs-12 ">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 col-md-6  col-xs-12 ">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 col-md-6  col-xs-12 ">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+	<div class="container-fluid padding-section list-style">
+		<div class="section-title">
+			<div class="row">
+				<div class="col-lg-6">
+					<h3>Recently Added</h3>
+					<h2>Properties for Sale</h2>
+				</div>
+				<div class="col-lg-6">
+					<button>View All</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row ">
+		<div class="col-lg-3 block-size">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 block-size">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 block-size">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-lg-3 block-size">
+			<div class="textWithBlurredBg">
+				<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+				<h2>View Property</h2>
+			</div>
+
+			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+				<h3>Luxury Villa</h3>
+				<div class="row inside-block">
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+					<div class="col-lg-6">
+						<i class="fa fa-bed"></i>
+						<span> 6 Bedrooms</span>
+					</div>
+				
+				</div>
+			
+			</div>
+
+		</div>
+	</div>
+<!--<div class="container-fluid">
+			<div class="section-title">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Recently Added</h3>
+				<h2>Properties for Sale</h2>
+			</div>
+			<div class="col-md-6">
+				<button style="float: right;">View All</button>
+			</div>
+				
+		</div>
+			</div>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-6  col-xs-12" style="margin-bottom: 40px;" >
+				<div class="textWithBlurredBg">
+						<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+							<h2>View Property</h2>
+				</div>
+
+				<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+					<h3>Luxury Villa</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<i class="fa fa-bed"></i>
+							<span> 6 Bedrooms</span>
+												
+						</div>
+						<div class="col-md-6">
+							<i class="fa fa-bath"></i>
+							<span> 3 Bathrooms</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-warehouse"></i>
+							<span> 2 Garages</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-object-group"></i>
+							<span> 720 SQ FT</span>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6  col-xs-12">
+				<div class="textWithBlurredBg">
+						<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+							<h2>View Property</h2>
+				</div>
+
+				<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+					<h3>Luxury Villa</h3>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-bed"></i>
+							<span> 6 Bedrooms</span>
+												
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-bath"></i>
+							<span> 3 Bathrooms</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-warehouse"></i>
+							<span> 2 Garages</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-object-group"></i>
+							<span> 720 SQ FT</span>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6  col-xs-12">
+				<div class="textWithBlurredBg">
+						<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+							<h2>View Property</h2>
+				</div>
+
+				<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+					<h3>Luxury Villa</h3>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-bed"></i>
+							<span> 6 Bedrooms</span>
+												
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-bath"></i>
+							<span> 3 Bathrooms</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-warehouse"></i>
+							<span> 2 Garages</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-object-group"></i>
+							<span> 720 SQ FT</span>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6  col-xs-12">
+				<div class="textWithBlurredBg">
+						<img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="del">
+							<h2>View Property</h2>
+				</div>
+
+				<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
+					<h3>Luxury Villa</h3>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-bed"></i>
+							<span> 6 Bedrooms</span>
+												
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-bath"></i>
+							<span> 3 Bathrooms</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-warehouse"></i>
+							<span> 2 Garages</span>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<i class="fa fa-object-group"></i>
+							<span> 720 SQ FT</span>
+						</div>
+					</div>
+					
+				</div>
+			</div>	
+			</div>
+			</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<% include partials/footer %>

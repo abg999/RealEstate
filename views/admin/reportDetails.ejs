@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+<link rel="stylesheet" type="text/css" href="/css/reportDetails.css">
+<div class="ui main text container segment" style="margin-top: 7.0em;">
+	<div class="ui huge header"><%= prop.propTitle %></div>
+			<a href="/list/Properties/<%= prop.id %>"><button class="view">view Property</button></a>
+					<% prop.reports.forEach(function(report){ %>
+						<div class="ui segment form">
+							<div class="field">
+									<i class="fas fa-user"></i>
+									 <span><strong><%= report.reportedby.username  %></strong>	
+									 </span>
+									 <span style="float: right;"><%= report.reportedOn.toDateString() %></span>
+									
+									<h4><%= report.reportreason %></h4>
+									<label>		</label>
+							</div>
+						</div>
+					<% }); %>
+<a href="/admin/<%=  prop.id %>/deleteprop%>"><button class="negative ui button">Delete Property</button></a>
+</div>
+
+<% include ../partials/footer %>
