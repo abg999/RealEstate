@@ -462,6 +462,7 @@ app.get("/admin/:id/deleteprop",isAdmin,function(req,res){
 
 
 
-app.listen(4004,function(){
+app.listen(process.env.PORT||4004,function(){
 	console.log("server started at port 4004")
 });
+
