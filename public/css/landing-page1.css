@@ -142,7 +142,6 @@ label{
 	top: 30%
 	z-index: 1;
 	color:#fff;
-	text-align: center;
 	width:100%;
 	opacity: 0;
 	transition: .3s;
