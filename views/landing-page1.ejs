@@ -43,6 +43,7 @@
 			</div>
     <div class="col-lg-2"></div>
   </div>
+  </div>
 </section>
 
 <div class="container-fluid" style="margin-top: 55px;">
@@ -58,18 +59,15 @@
 				 <!-- <button style="float: right;">View All</button> wILL NOT WORK AS RESPONSIVE -->
 		</div>
 	</div>
-	<div class="row">
+<div class="row">
 		<!-- For loop for backend -->
-		<% sale.forEach(function(rent){%>
+		<% sale.forEach(function(sale){%>
 		<div class="col-lg-3 col-md-6  col-xs-12" style="margin-bottom: 40px;" >
 			<div class="textWithBlurredBg">
-				<img src="<%= rent.img1 %>" alt="del">
-					<h2>
-						<div>
-
-						<a href="/list/properties/<%= rent.id%>" style="text-align: center;  text-decoration: none;">View Property</a>
+				<img src="<%= sale.img1 %>" alt="del">
+					<h2 >
+						<a href="/list/properties/<%= sale.id%>" style="text-align: center; margin-top: auto; text-decoration: none;">View Property</a>
 							</h2>
-						</div>
 			</div>
 			<div class="content" style="background-color: white; margin-bottom: 0; margin-top: 0; vertical-align: top; margin-top: -5px; padding: 15px;">
 				<h3><%= sale.propTitle%></h3>
@@ -95,13 +93,12 @@
 			</div>
 			<% }); %>
 			<!-- For loop for backend ends -->	
+			</div>	
 			</div>
 </div>
 
 <!-- 
-Properties fir Rent Area Starts
-
- -->
+Properties fir Rent Area Starts-->
 
 <div class="container-fluid" style="margin-top: 55px;">
 	<div class="section-title">
