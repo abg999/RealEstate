@@ -9,42 +9,58 @@
 <section class="jumbotron">
   <div class="container">
   	<div class="row text-center">
-  		<div class="col-lg-2"></div>
+  		<div class="col-lg-2">
+  			
+  		</div>
   		<div class="col-lg-8">
         <h1 class="search-header">Find Your Dream Home</h1>
         <h5>We have over millon dream properties for you</h5>
       </div>
-      <div style="margin: auto;" class="search-trip">
-      	<form  action="/list" method="GET" >
-					<div class="row" >
-						<div class="col-lg-3 col-md-6">		
-							<label for="state">State</label>
+      <div class="col-lg-2">
+      	
+      </div>
+    </div>
+    <div class="row text-center">
+  		<div class="col-lg-1">
+  			
+  		</div>
+  		<div class="col-lg-10">
+  			<div style="margin: auto;" class="search-trip">
+      		<form  action="/list" method="GET" >
+						<div class="row" >
+							<div class="col-lg-3 col-md-6">		
+								<label for="state">State</label>
 								<select required id="state" name="propDetails[state]" class="custom-select mb-2 mr-sm-2 mb-sm-0" onchange="populate(this.id,'city')">
 									<option selected></option>
 									<option value="1">Maharashtra</option>
 			    				<option value="2">Gujrat</option>
 			    			</select>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<label for="city">City</label>
+								<select required id="city" name="propDetails[city]" class="custom-select mb-2 mr-sm-2 mb-sm-0"></select>
+							</div>
+							<div class="col-lg-3 col-md-6">
+								<label for="status">Status</label>
+								<select required id="status" name="propDetails[propStatus]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+									<option value="1" selected>Rent</option>
+					    		<option value="2">Sale</option>
+					    	</select>
+							</div>
+							<div class="col-lg-3 col-md-6" >
+								<p><p><input type="submit"  class="btn btn-primary btn-lg" role="button" value="Search Properties!" style="padding: 9px;margin-top: 8px;"></p></p>
+							</div>
 						</div>
-					<div class="col-lg-3 col-md-6">
-						<label for="city">City</label>
-							<select required id="city" name="propDetails[city]" class="custom-select mb-2 mr-sm-2 mb-sm-0"></select>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<label for="status">Status</label>
-							<select required id="status" name="propDetails[propStatus]" class="custom-select mb-2 mr-sm-2 mb-sm-0">
-								<option value="1" selected>Rent</option>
-					    	<option value="2">Sale</option>
-					    </select>
-					</div>
-					<div class="col-lg-3 col-md-6" >
-						<p><p><input type="submit"  class="btn btn-primary btn-lg" role="button" value="Search Properties!" style="padding: 9px;margin-top: 8px;"></p></p>
-					</div>
-				</form>
-			</div>
-    <div class="col-lg-2"></div>
-  </div>
+					</form>
+				</div>
+      </div>
+      <div class="col-lg-1">
+      	
+      </div>
+    </div>	
   </div>
 </section>
+
 
 <div class="container-fluid" style="margin-top: 55px;">
 	<div class="section-title">
@@ -149,6 +165,7 @@ Properties fir Rent Area Starts-->
 			<!-- For loop for backend ends -->	
 			</div>
 </div>
+
 
 
 
